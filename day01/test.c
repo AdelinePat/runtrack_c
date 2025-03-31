@@ -6,22 +6,23 @@ int main(int argc, char *argv[])
     int choice = 0;
     char message[] = "Vous avez choisi :";
 
-    const char item_1[] = "Royal Cheese";
-    const char item_2[] = "Mc Deluxe";
-    const char item_3[] = "Mc Bacon";
-    const char item_4[] = "Big Mac";
+    /*
+    char * variable_name = value  == char variable_name[] = value
+    char * or char ...[] = pointer to first element of char list
+    */
+
+    char * item_1 = "Royal Cheese";
+    char item_2[10] = "Mc Deluxe";
+    char item_3[9] = "Mc Bacon";
+    char item_4[8] = "Big Mac";
+
+    char * my_items[] = {item_1, item_2, item_3, item_4};
+
     printf("=== Menu ===\n");
-
-    // char my_items[4][13] = {item_1, item_2, item_3, item_4};
-    char my_items[4][13] = {"Royal Cheese", "Mc Deluxe", "Mc Bacon", "Big Mac"};
-
-    // char arr[3][10] = {"Geek", "Geeks",
-    //     "Geekfor"}; 
 
     for (int i=0; i < 4; i++)
     {
-        int y = i+1;
-        printf("%d. %s\n", y, my_items[i]);
+        printf("%d. %s\n", i+1, my_items[i]);
     }
     
     printf("\nVotre choix ?\n");
