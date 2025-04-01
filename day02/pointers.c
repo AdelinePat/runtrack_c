@@ -4,12 +4,34 @@
 
 int main()
 {
-    float my_array[10] = {1.4, 2.4, 3.4, 0.4, 4.4, 55.4, 6.4, 7.4, 9.4, 6.4};
-    // int size_array = sizeof(my_array);
+    float my_array[7] = {1, 2, 3, 4, 5, 6, 30};
+    // float my_array[10] = {1.4, 2.4, 3.4, 0.4, 4.4, 55.4, 6.4, 7.4, 9.4, 6.4};
+    float size_array = sizeof(my_array) / sizeof(my_array[0]);
+    
+    int value = 0;
+    float average = 0;
 
-    display_array_content(my_array, 10);
+    printf("value = %d\n", value);
+    average_array_items(my_array, size_array, &value, &average);
+    printf("La somme des nombres du tableau est de %d\nLa moyenne est de %f", value, average);
 
     return 0;
+}
+
+int sum_array_items(float array[], float size)
+{
+    float final_value = 0;
+    for (int i = 0 ; i < size ; i++)
+    {
+        final_value += array[i];
+    }
+    return final_value;
+}
+
+void average_array_items(float array[], float size, int *value, float *average)
+{
+    *value = sum_array_items(array, size);
+    *average = *value / size;
 }
 
 void display_array_content(float *array, int size)
