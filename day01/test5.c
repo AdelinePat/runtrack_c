@@ -12,11 +12,11 @@ int display_menu()
     char * or char ...[] = pointer to first element of char list
     */
 
-    char item_1[] = "Royal Cheese !!";
-    char item_2[] = "Mc Deluxe !";
-    char item_3[] = "Mc Bacon ?";
-    char item_4[] = "Big Mac";
-    char item_5[] = "Booyah";
+    char *item_1 = "Royal Cheese !!";
+    char *item_2 = "Mc Deluxe !";
+    char *item_3 = "Mc Bacon ?";
+    char *item_4 = "Big Mac";
+    char *item_5 = "Booyah";
 
     char * my_items[] = {item_1, item_2, item_3, item_4, item_5};
     
