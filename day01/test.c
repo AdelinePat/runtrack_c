@@ -11,13 +11,13 @@ int main(int argc, char *argv[])
     char * or char ...[] = pointer to first element of char list
     */
 
-    char * item_1 = "Royal Cheese";
-    char item_2[10] = "Mc Deluxe";
-    char item_3[9] = "Mc Bacon";
-    char item_4[8] = "Big Mac";
+    char item_1[] = "Royal Cheese";
+    char item_2[] = "Mc Deluxe";
+    char item_3[] = "Mc Bacon";
+    char item_4[] = "Big Mac";
 
     char * my_items[] = {item_1, item_2, item_3, item_4};
-
+    
     printf("=== Menu ===\n");
 
     for (int i=0; i < 4; i++)
