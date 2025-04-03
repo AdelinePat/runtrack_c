@@ -11,7 +11,6 @@ int display_menu()
     char * variable_name = value  == char variable_name[] = value
     char * or char ...[] = pointer to first element of char list
     */
-
     char *item_1 = "Royal Cheese !!";
     char *item_2 = "Mc Deluxe !";
     char *item_3 = "Mc Bacon ?";
