@@ -16,8 +16,8 @@ int main(int argc, char const *argv[])
     if(file != NULL)
     {
         printf("Ouverture du fichier avec succès.");
-        
-        fputs("Mouhahaha!!!\nJ'en ai tellement marre de cette formation...\nJe veux des vacances bien longues là.\n\n", file);
+        // fseek(file, 1, SEEK_END);
+        fputs("\nMouhahaha!!!\nJ'en ai tellement marre de cette formation...\nJe veux des vacances bien longues là.\n\n", file);
         fputc('A', file);
 
         printf("Votre nom ?\n");
@@ -34,6 +34,7 @@ int main(int argc, char const *argv[])
     }
 
     file = fopen(FILE_PATH, "r");
+    
 
     if (file != NULL)
     {
@@ -48,12 +49,20 @@ int main(int argc, char const *argv[])
         {
             printf("test de string : %s", string);
         } while (fgets(string, SIZE_MAX_ARRAY, file) != NULL);
+
+        // fseek(file, 2, SEEK_SET);
+        fclose(file);
+        // rename("test.txt", "test2.txt");
+        // remove("test2.txt");
+        
         
     }
 
-    
+    printf("La taille de age est de %d", sizeof(age));
 
     printf("\nvaleur du pointeur file : %p\n", file);
+
+    
 
     return 0;
 }
